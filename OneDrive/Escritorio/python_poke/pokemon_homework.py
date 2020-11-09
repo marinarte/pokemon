@@ -18,9 +18,9 @@ for num in pokemon_list: #hago repetir por cada elemento de la lista
     response = requests.get (url) #pido a la api la url de cada elemento de la lista
     #    print (response)
 
-    pokemon44 = response.json() #pido la respuesta en json
+    pokemon4433 = response.json() #pido la respuesta en json
 
-    pokemon_name = pokemon44 ["name"] #asigno variable para q busque el nonmbre dentro de la respuesta
+    pokemon_name = pokemon4433 ["name"] #asigno variable para q busque el nonmbre dentro de la respuesta
     pokemon_namelist.append(pokemon_name)
 
     #moves = pokemon ["moves"]
@@ -34,12 +34,12 @@ def saves_pokemon_to_file(new_pokemon):
     # find a good way to save the pokemon without overwriting the file
     with open('pokemon.txt', 'r') as text_file:
         pokemon_file = text_file.read()
-    pokemon44 = pokemon_file + new_pokemon + '\n'
+    pokemon4433 = pokemon_file + new_pokemon + '\n'
     with open('pokemon.txt', 'w+') as text_file:
-        text_file.write(pokemon44)
+        text_file.write(pokemon4433)
 # loop through each pokemon and save to the file using the function
-for pokemon44 in pokemon_namelist:
-    saves_pokemon_to_file(pokemon44)
+for pokemon4433 in pokemon_namelist:
+    saves_pokemon_to_file(pokemon4433)
 
 
 #moves = pokemon['moves'] # lo copie del ejemplo, sino los moves quedaban muy largos, creo
